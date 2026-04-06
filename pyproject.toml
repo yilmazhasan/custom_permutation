@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "custom_permutation"
+dynamic = ["version"]
+dependencies = ["typer"]
+
+authors = [
+  { name="Reego Software", email="reego.software@gmail.com" },
+]
+description = "A CLI tool to permutate with custom options by @yilmazhasan"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/yilmazhasan/custom_permutation"
+Issues = "https://github.com/yilmazhasan/custom_permutation/issues"
+
+[project.scripts]
+custom_permutation = "custom_permutation.cli:app"
+
+[tool.hatch.version]
+path = "src/custom_permutation/__init__.py"
