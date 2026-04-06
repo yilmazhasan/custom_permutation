@@ -9,9 +9,9 @@ app = typer.Typer()
 
 
 @app.command()
-def main(items: Annotated[str, typer.Option("--items", "-i")] = [],
-         includes: Annotated[list[str], typer.Option("--include", "-inc", "-i")] = [], # e.g. ("a,0")
-         excludes: Annotated[list[str], typer.Option("--exclude", "-exc", "-x")] = []): # e.g. ("b,1")
+def main(items: Annotated[str, typer.Option("--items")] = [], # e.g. "a,b,c"
+         includes: Annotated[list[str], typer.Option("--include", "-inc", "-i")] = [], # e.g. "-i a,0"
+         excludes: Annotated[list[str], typer.Option("--exclude", "-exc", "-x")] = []): # e.g. "-i "b,1"
 
     separator = ',' # by default
     items = items.split(separator)
