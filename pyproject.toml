@@ -8,7 +8,8 @@ dynamic = ["version"]
 dependencies = ["typer"]
 
 authors = [
-  { name="Reego Software", email="reego.software@gmail.com" },
+  { name="Hasan YILMAZ", email="ylmzhsn@proton.me" },
+  { name="Reego Software", email="reego.software@gmail.com" }
 ]
 description = "A CLI tool to permutate with custom options by @yilmazhasan"
 readme = "README.md"
