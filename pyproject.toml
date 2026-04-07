@@ -24,7 +24,7 @@ Homepage = "https://github.com/yilmazhasan/custom_permutation"
 Issues = "https://github.com/yilmazhasan/custom_permutation/issues"
 
 [project.scripts]
-custom_permutation = "custom_permutation.cli:app"
+custom_permutation = "custom_permutation.app:main"
 
 [tool.hatch.version]
 path = "src/custom_permutation/__init__.py"
