@@ -1,5 +1,5 @@
 from collections import Counter
-from lib import get_list_from_ids_mapping, increment_by_custom_base, freq_in_range
+from .lib import get_list_from_ids_mapping, increment_by_custom_base, freq_in_range
 
 # To permutate the list with some custom options, such as we don't want `c` to be at first option.
 

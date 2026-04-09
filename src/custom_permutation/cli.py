@@ -2,8 +2,8 @@
 from typing import Annotated
 import typer
 
-from scripts import custom_permutate_by_options
-from lib import get_options
+from .scripts import custom_permutate_by_options
+from .lib import get_options
 
 app = typer.Typer()
 
