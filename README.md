@@ -1,8 +1,10 @@
 # Custom Permutation
 
+> Version 1.0.2
+
 Python implementation for Custom Permutation.
 
-## Setup
+## Setup for repo
 
 1. Clone the repository
 2. Create and activate the virtural environment
