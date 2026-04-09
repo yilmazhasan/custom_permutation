@@ -13,12 +13,20 @@ def generate(items: Annotated[str, typer.Option("--items", help="Comma-separated
          excludes: Annotated[list[str], typer.Option("--exclude", "-exc", "-ex", "-x", help="List for the included options, e.g. b,2")] = []): # e.g. "-x "b,1"
 
     separator = ',' # by default
-    items = items.split(separator)
+    if type(items) == str:
+      items = items.split(separator)
     options = get_options(items, includes, excludes, separator)
     permutation_generator = custom_permutate_by_options(items, options)
 
+    results = []
+
     for permutation in permutation_generator:
-        print(separator.join(permutation))
+        res = separator.join(permutation).split(separator)
+        print(res)
+        results.append(res)
+
+    return results
+
 
 if __name__ == "__main__":
   app()
