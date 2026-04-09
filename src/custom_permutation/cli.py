@@ -7,9 +7,8 @@ from .lib import get_options
 
 app = typer.Typer()
 
-
 @app.command()
-def main(items: Annotated[str, typer.Option("--items", help="Comma-separated list, e.g. a,b,c")] = [], # e.g. "a,b,c"
+def generate(items: Annotated[str, typer.Option("--items", help="Comma-separated list, e.g. a,b,c")] = [], # e.g. "a,b,c"
          includes: Annotated[list[str], typer.Option("--include", "-inc", "-ix", "-i", help="List for the included options, e.g. a,1")] = [], # e.g. "-i a,0"
          excludes: Annotated[list[str], typer.Option("--exclude", "-exc", "-ex", "-x", help="List for the included options, e.g. b,2")] = []): # e.g. "-x "b,1"
 
