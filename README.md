@@ -29,7 +29,7 @@ Output:
 ### CLI usage
 
 ```sh
-custom_permutation --items "a,b,c,d" -i "a,1" -x "c,2"
+custom_permutation --items "a,b,c,d" -i "a,1" -x "c,2" -o stdout
 ```
 
 Output:
