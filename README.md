@@ -1,6 +1,6 @@
 # Custom Permutation
 
-> Version 1.0.6
+> Version 1.0.7
 
 Python implementation for Custom Permutation.
 
