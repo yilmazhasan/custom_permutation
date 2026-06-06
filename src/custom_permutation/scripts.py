@@ -1,3 +1,4 @@
+import math
 from collections import Counter
 from .lib import get_list_from_ids_mapping, increment_by_custom_base, freq_in_range
 
@@ -32,7 +33,7 @@ def custom_permutate_by_options(item_list, item_options=[]):
     # The base for the position that should be limited
     item_bases = [len(the_choices[i]) for i in range(slot_count)]
 
-    iter_count = 1921
+    iter_count = math.prod(item_bases)
 
     initial = [0] * slot_count
     current = initial

@@ -10,9 +10,9 @@ Python implementation for Custom Permutation.
 ### Programmatic usage
 
 ```py
-from custom_permutation import cli
+from custom_permutation import CustomPermutation
 
-cli.generate(items=["a", "b", "c", "d"], includes=["a,1"], excludes=["c,2"])
+CustomPermutation.generate(items=["a", "b", "c", "d"], includes=["a,1"], excludes=["c,2"])
 ```
 
 Output:
