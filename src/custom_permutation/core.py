@@ -12,5 +12,5 @@ def generate(items, includes=None, excludes=None, separator=','):
     options = get_options(items, includes, excludes, separator)
     results = []
     for permutation in custom_permutate_by_options(items, options):
-        results.append(separator.join(permutation).split(separator))
+        results.append(list(permutation))
     return results

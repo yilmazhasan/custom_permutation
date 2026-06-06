@@ -71,13 +71,13 @@ def get_options(items, includes, excludes, separator=","):
     by_indexes = {}
 
     for include in includes:
-        item, idx = include.split(separator)
+        item, idx = include.rsplit(separator, 1)
         idx = int(idx)
         by_indexes.setdefault(idx, {"include": [], "exclude": []})
         by_indexes[idx]["include"].append(item)
 
     for exclude in excludes:
-        item, idx = exclude.split(separator)
+        item, idx = exclude.rsplit(separator, 1)
         idx = int(idx)
         by_indexes.setdefault(idx, {"include": [], "exclude": []})
         by_indexes[idx]["exclude"].append(item)

@@ -16,7 +16,7 @@ def generate(
         "--include", "-inc", "-ix", "-i", help="Included constraint, e.g. -i a,1")] = [],
     excludes: Annotated[list[str], typer.Option(
         "--exclude", "-exc", "-ex", "-x", help="Excluded constraint, e.g. -x b,2")] = [],
-    out: Annotated[str, typer.Option("--out", "-o", help="Output destination: 'stdout' or a filepath")] = '',
+    out: Annotated[str, typer.Option("--out", "-o", help="Output destination: 'stdout' or a filepath")] = 'stdout',
 ):
     results = _core_generate(items=items, includes=includes, excludes=excludes)
 
