@@ -29,3 +29,7 @@ custom_permutation = "custom_permutation.cli:app"
 
 [tool.hatch.version]
 path = "src/custom_permutation/__init__.py"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

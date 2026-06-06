@@ -11,8 +11,8 @@ def get_permutation_count(permutation_generator):
 
 
 def test_public_api():
-    results = CustomPermutation.generate(items=['b', 'b', 'b', 'c'], includes=['b,0'])
-    assert len(results) == 3
+    results = CustomPermutation.generate(items=['a', 'b', 'c', 'd'], includes=['a,1'], excludes=['c,2'])
+    assert results == [['b', 'a', 'd', 'c'], ['c', 'a', 'b', 'd'], ['c', 'a', 'd', 'b'], ['d', 'a', 'b', 'c']]
 
 
 def test_app_with_inc_and_exc():
