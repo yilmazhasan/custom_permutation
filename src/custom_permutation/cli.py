@@ -16,16 +16,16 @@ def generate(
         "--include", "-inc", "-ix", "-i", help="Included constraint, e.g. -i a,1")] = [],
     excludes: Annotated[list[str], typer.Option(
         "--exclude", "-exc", "-ex", "-x", help="Excluded constraint, e.g. -x b,2")] = [],
-    out: Annotated[str, typer.Option("--out", "-o", help="Output destination: 'stdout' or a filepath")] = 'stdout',
+    out: Annotated[str, typer.Option("--out", "-o", help="Write results to a filepath, e.g. --out output.txt")] = '',
 ):
     results = _core_generate(items=items, includes=includes, excludes=excludes)
 
-    if out == 'stdout':
-        for perm in results:
-            print(perm)
-    elif out:
+    if out:
         with open(out, 'w') as f:
             f.write('\n'.join([_SEPARATOR.join(perm) for perm in results]))
+    else:
+        for perm in results:
+            print(perm)
 
     return results
 
