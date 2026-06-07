@@ -1,4 +1,4 @@
-__version__ = "1.0.7"
+__version__ = "1.0.8"
 
 from .core import generate as _generate
 from . import cli  # backward compat
