@@ -11,7 +11,10 @@ Python implementation for Custom Permutation.
 ```py
 from custom_permutation import CustomPermutation
 
-CustomPermutation.generate(items=["a", "b", "c", "d"], includes=["a,1"], excludes=["c,2"])
+CustomPermutation.generate(
+   items=["a", "b", "c", "d"],
+   includes=["a,1"],
+   excludes=["c,2"])
 ```
 
 Output:
@@ -47,17 +50,20 @@ Output:
 ## Set up locally for development
 
 1. Clone the repository
+
 2. Create and activate the virtural environment
 
    > `python -m venv .venv`
 
-   > `source venv_mysite/bin/activate`
+   > `source .venv/bin/activate`
 
 3. Install requirements:
 
    > `pip install -r requirements.txt`
 
-4. Run the app:
+4. Test the app:
+
+   > `pytest`
 
    > `python src/custom_permutation/app.py --items a,b,c,d -i a,0 -x c,1 -x a,2`
 
